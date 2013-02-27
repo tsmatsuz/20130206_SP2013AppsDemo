@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="0e357c80-93e9-4ee5-87c7-c63d1aaf706d" Scope="Web" Title="SP2013AppsDemo Feature2">
+  <ElementManifests>
+    <ElementManifest Location="EventListRibbonAction\Elements.xml" />
+    <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\DisplayMap.aspx" />
+  </ElementManifests>
+</Feature>

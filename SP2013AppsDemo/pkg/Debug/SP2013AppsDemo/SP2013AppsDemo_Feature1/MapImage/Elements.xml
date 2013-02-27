@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="MapImage" Url="Lists/DemoResources">
+    <File Path="MapImage\kanto.jpg"
+          Url="Images/kanto.jpg"
+          Type="GhostableInLibrary" />
+  </Module>
+</Elements>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="af6f18d2-bf73-40d1-a76d-a6e7f1e29fa8" Scope="Web" Title="SP2013AppsDemo Feature1">
+  <ElementManifests>
+    <ElementManifest Location="EventListInstance\Elements.xml" />
+    <ElementManifest Location="EventList\Elements.xml" />
+    <ElementFile Location="EventList\Schema.xml" />
+    <ElementManifest Location="DemoResourcesInstance\Elements.xml" />
+    <ElementManifest Location="DemoResources\Elements.xml" />
+    <ElementFile Location="DemoResources\Schema.xml" />
+    <ElementFile Location="DemoResources\EditDlg.htm" />
+    <ElementFile Location="DemoResources\FileDlg.htm" />
+    <ElementFile Location="DemoResources\Repair.aspx" />
+    <ElementFile Location="DemoResources\Upload.aspx" />
+    <ElementManifest Location="MapImage\Elements.xml" />
+    <ElementFile Location="MapImage\kanto.jpg" />
+    <ElementManifest Location="PlaceImage\Elements.xml" />
+    <ElementFile Location="PlaceImage\place.png" />
+    <ElementManifest Location="PlaceImage16\Elements.xml" />
+    <ElementFile Location="PlaceImage16\place16.png" />
+    <ElementManifest Location="Scripts\Elements.xml" />
+    <ElementFile Location="Scripts\_references.js" />
+    <ElementFile Location="Scripts\jquery-1.7.1.intellisense.js" />
+    <ElementFile Location="Scripts\jquery-1.7.1.js" />
+    <ElementFile Location="Scripts\jquery-1.7.1.min.js" />
+    <ElementFile Location="Scripts\EventListCSR.js" />
+  </ElementManifests>
+</Feature>

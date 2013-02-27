@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="EventList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/EventList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x010039125abbc57842ca8a7d36a1defb7678"
+                   Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{afb7686f-7d8a-4f53-9643-ad4c6e40bc6f}" Name="Pref" />
+          <FieldRef ID="{489f39a9-5633-43d0-85b3-2b7617dba286}" Name="Address" />
+          <FieldRef ID="{52fd418e-05d6-4836-a4cd-9f28097e80ac}" Name="PlaceType" />
+        </FieldRefs>
+      </ContentType>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="$Resources:core,Title;" Type="Text" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field Name="Pref" ID="{afb7686f-7d8a-4f53-9643-ad4c6e40bc6f}" DisplayName="都道府県" Type="Text" />
+      <Field Name="Address" ID="{489f39a9-5633-43d0-85b3-2b7617dba286}" DisplayName="その他住所" Type="Text" />
+      <Field Name="PlaceType" ID="{52fd418e-05d6-4836-a4cd-9f28097e80ac}" DisplayName="種別" Type="Choice">
+        <CHOICES>
+          <CHOICE>商業施設</CHOICE>
+          <CHOICE>公共施設</CHOICE>
+          <CHOICE>その他</CHOICE>
+        </CHOICES>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1"
+            Type="HTML"
+            WebPartZoneID="Main"
+            DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+            DefaultView="TRUE"
+            MobileView="TRUE"
+            MobileDefaultView="TRUE"
+            SetupPath="pages\viewpage.aspx"
+            ImageUrl="/_layouts/15/images/generic.png"
+            Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js|~site/Scripts/jquery-1.7.1.min.js|~site/Scripts/EventListCSR.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="Pref" />
+          <FieldRef Name="Address" />
+          <FieldRef Name="PlaceType" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm"
+            Url="DispForm.aspx"
+            SetupPath="pages\form.aspx"
+            WebPartZoneID="Main"/>
+      <Form Type="EditForm"
+            Url="EditForm.aspx"
+            SetupPath="pages\form.aspx"
+            WebPartZoneID="Main"
+            JSLink="~site/Scripts/jquery-1.7.1.min.js|~site/Scripts/EventListCSR.js"/>
+      <Form Type="NewForm"
+            Url="NewForm.aspx"
+            SetupPath="pages\form.aspx"
+            WebPartZoneID="Main"
+            JSLink="~site/Scripts/jquery-1.7.1.min.js|~site/Scripts/EventListCSR.js"/>
+    </Forms>
+  </MetaData>
+</List>

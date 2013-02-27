@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="69ea7b61-c924-4564-b4fb-05cd46e3550b.EventListRibbonAction"
+                RegistrationType="List"
+                RegistrationId="10001"
+                Location="CommandUI.Ribbon"
+                Sequence="10001"
+                Title="&apos;EventListRibbonAction&apos; 動作の呼び出し">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <!-- new group and button -->
+        <CommandUIDefinition Location="Ribbon.ListItem.Groups._children">
+          <Group
+            Id="Ribbon.ListItem.MyCustomGroup"
+            Sequence="1"
+            Description="イベント会場に関するカスタム操作"
+            Title="会場管理"
+            Template="Ribbon.Templates.TestGroupTemplate">
+            <Controls Id="Ribbon.ListItem.MyCustomGroup.Controls">
+              <Button
+                Id="Ribbon.ListItem.MyCustomGroup.New"
+                Alt="会場の地図を表示します"
+                Sequence="1"
+                Image32by32="~site/Lists/DemoResources/Images/place.png"
+                Image16by16="~site/Lists/DemoResources/Images/place16.png"
+                Command="Invoke_EventListRibbonActionButtonRequest"
+                LabelText="場所の表示"
+                TemplateAlias="Area1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children" >
+          <GroupTemplate Id="Ribbon.Templates.TestGroupTemplate">
+            <Layout Title="OneLarge" LayoutTitle="OneLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="Area1" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.ListItem.Scaling._children">
+          <MaxSize Id="Ribbon.ListItem.MyCustomGroup.Scaling.MaxSize"
+            Sequence="35"
+            GroupId="Ribbon.ListItem.MyCustomGroup"
+            Size="OneLarge"/>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="Invoke_EventListRibbonActionButtonRequest"
+                          CommandAction="~site/Pages/DisplayMap.aspx?source={Source}&amp;list={SelectedListId}&amp;item={SelectedItemId}"
+                          EnabledScript="javascript:function OneItemSelected()
+                            {
+                              var items = SP.ListOperation.Selection.getSelectedItems();
+                              var ci = CountDictionary(items);
+                              return (ci == 1);
+                            }
+                            OneItemSelected();"/>
+      </CommandUIHandlers>
+    </CommandUIExtension >
+  </CustomAction>
+</Elements>

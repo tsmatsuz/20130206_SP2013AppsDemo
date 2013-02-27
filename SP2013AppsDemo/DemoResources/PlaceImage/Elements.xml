@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PlaceImage" Url="Lists/DemoResources">
+    <File Path="PlaceImage\place.png"
+          Url="Images/place.png"
+          Type="GhostableInLibrary"/>
+  </Module>
+</Elements>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- 下の Name 属性の値を変更しないでください。リスト プロジェクト項目のフォルダー名と一致しない場合、そのプロジェクトの実行時にエラーが発生します。 -->
+    <ListTemplate
+        Name="DemoResources"
+        Type="10001"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="110"
+        DisplayName="DemoResources"
+        Description="マイ リスト定義"
+        Image="/_layouts/15/images/itdl.png"
+        DocumentTemplate="121"/>
+</Elements>

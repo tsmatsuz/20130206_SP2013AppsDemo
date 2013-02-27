@@ -1,0 +1,4 @@
+C:\Demo\SP2013AppsDemo\SP2013AppsDemo\bin\Debug\SP2013AppsDemo.pdb
+C:\Demo\SP2013AppsDemo\SP2013AppsDemo\obj\Debug\SP2013AppsDemo.dll
+C:\Demo\SP2013AppsDemo\SP2013AppsDemo\obj\Debug\SP2013AppsDemo.pdb
+C:\Demo\SP2013AppsDemo\SP2013AppsDemo\obj\Debug\SP2013AppsDemo.csprojResolveAssemblyReference.cache
